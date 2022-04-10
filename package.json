@@ -4,16 +4,17 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start": "node bin/www",
+    "start": "NODE_ENV=production node build/app.js",
     "dev": "NODE_ENV=development nodemon bin/www",
-    "test": "echo \"No tests\" && exit 1"
+    "test": "echo \"No tests\" && exit 1",
+    "build": "esbuild bin/www.js --platform=node --bundle --minify --outfile=build/app.js"
   },
   "author": "Luis Parra Meza",
   "license": "MIT",
   "dependencies": {
     "cors": "^2.8.5",
-    "express": "^4.17.3",
-    "serve-favicon": "^2.5.0"
+    "esbuild": "^0.14.34",
+    "express": "^4.17.3"
   },
   "devDependencies": {
     "morgan": "^1.10.0",
