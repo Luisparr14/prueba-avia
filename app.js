@@ -18,7 +18,6 @@ app.set('port', process.env.PORT || 3000)
 app.use('/api/v1', cors(corsOptions), routes);
 app.use('/', express.static(path.join(__dirname, url)));
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, url, 'index.html'));
-  res.send('<script>window.location.href = "/"</script>');
+  res.redirect('/');
 });
 module.exports = app
