@@ -12,8 +12,8 @@ const corsOptions = {
 if (process.env.NODE_ENV === 'development') {
   app.use(logger('dev'));
 }
-const url = process.env.NODE_ENV === 'production' ? 'public/prueba-avia' : 'build/public/prueba-avia';
 
+const url = (process.env.NODE_ENV !== 'production') && (process.env.NODE_ENV!==undefined) ? 'build/public/prueba-avia' : 'public/prueba-avia';
 app.set('port', process.env.PORT || 3000)
 app.use(express.json())
 app.use('/api/v1', cors(corsOptions), routes);
