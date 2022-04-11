@@ -1,8 +1,10 @@
 const router = require('express').Router();
-const data = require('../../data/data.json');
+const { hotel, hoteles, addHotel, deteleHotel, updateHotel } = require('./hoteles.controller');
 
-router.get('/', (req, res) => {
-  return res.json(data);
-})
+router.get('/', hoteles);
+router.get('/:id', hotel);
+router.post('/', addHotel);
+router.delete('/:id', deteleHotel);
+router.put('/:id', updateHotel);
 
 module.exports = router;

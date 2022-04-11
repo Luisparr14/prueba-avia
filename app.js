@@ -15,6 +15,7 @@ if (process.env.NODE_ENV === 'development') {
 const url = process.env.NODE_ENV === 'production' ? 'public/prueba-avia' : 'build/public/prueba-avia';
 
 app.set('port', process.env.PORT || 3000)
+app.use(express.json())
 app.use('/api/v1', cors(corsOptions), routes);
 app.use('/', express.static(path.join(__dirname, url)));
 app.get('*', (req, res) => {
