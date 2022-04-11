@@ -39,3 +39,13 @@ Debe mover dicha carpeta que tiene el nombre del proyecto a la carpeta ```build/
 
 <li>La informacion de los hoteles se sirve en http://localhost:3000/api/v1/hotels</li>
 <li>En caso de contar con los archivos estaticos se sirven en la ruta http://localhost:3000 del servidor</li>
+
+<h3>Los endpoints disponibles en modo desarrollo (puerto 3000) son:</h3>
+
+| Metodo | Descripción | EndPoint |
+| --- | --- | --- |
+| `GET` | Devuelve todos los hoteles en formato json | `/api/v1/hotels` |
+| `GET` | Muestra la informacion especifica de un hotel | `/api/v1/hotels/:id` |
+| `POST` | Agrega un nuevo *hotel* | `/api/v1/hotels` |
+| `PUT` | Edita un hotel basado en su ID | `/api/v1/hotels/:id` |
+| `DELETE` |Elimina un hotel basado en su ID | `/api/v1/hotels/:id` |
