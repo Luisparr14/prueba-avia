@@ -65,7 +65,7 @@ const hotel = (req, res) => {
       padding: 20px 0px 10px 0px;
     }    
     </style>
-<style type="text/css" media="min-width: 720px">
+<style type="text/css" media="screen and (min-width: 720px)">
 
 .hotel{
   display: flex;
