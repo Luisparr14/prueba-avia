@@ -20,7 +20,7 @@ const hotel = (req, res) => {
   res.status(200).send(
     `<html>
     <head>    
-    <style >
+    <style type="text/css" >
     h2{
       color: #33629a;
     }
@@ -65,10 +65,8 @@ const hotel = (req, res) => {
       padding: 20px 0px 10px 0px;
     }    
     </style>
-<style media="screen and (min-width: 720px)">
-body{
-  background-color: #00f500;
-}
+<style type="text/css" media="min-width: 720px">
+
 .hotel{
   display: flex;
   flex-direction: row;    
