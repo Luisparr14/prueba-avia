@@ -20,7 +20,7 @@ const hotel = (req, res) => {
   res.status(200).send(
     `<html>
     <head>    
-    <style>
+    <style >
     h2{
       color: #33629a;
     }
@@ -63,64 +63,66 @@ const hotel = (req, res) => {
     }
     .price{
       padding: 20px 0px 10px 0px;
-    }
-    
-    @media screen and (min-width: 720px) {
-      .hotel{
-        display: flex;
-        flex-direction: row;    
-      }
-      .info-hotel{
-        display: flex;
-        flex: 1;
-        padding: 20px;
-        flex-direction: column;
-      }
-      .image-hotel{
-        width: 30%;
-        flex: 1.5;
-        max-height: 250px;
-        min-height: 220px;
-        object-fit: contain;
-      }
-      .separator{
-        margin: 0px 20px 0px 10px;
-        width: 0px;
-        border: 2px dotted #aaa;
-        flex: 0
-      }
-      .star, .amenitie{
-        height: 18px;
-        margin: 3px 3px;
-      }
-      .price-info{
-        flex: 1;
-      }
-      .price span{
-        font-size: 20px;  
-      }
-      .price-info p{
-        font-size: small;
-        color: #aaa;
-      }
-      .btn{
-        font-size: x-small;
-      }
-      .btn{
-        display: flex;
-        margin: 20px auto 10px auto;
-        justify-content: center;
-        align-items: center;
-        padding: 10px 5px;
-        width: 70%;
-        border-radius: 5px;
-        color: #fff;
-        font-weight: bold;
-        cursor: pointer;
-        background-color: #1976d2;
-      }
-    }
+    }    
     </style>
+<style media="screen and (min-width: 720px)">
+body{
+  background-color: #00f500;
+}
+.hotel{
+  display: flex;
+  flex-direction: row;    
+}
+.info-hotel{
+  display: flex;
+  flex: 1;
+  padding: 20px;
+  flex-direction: column;
+}
+.image-hotel{
+  width: 30%;
+  flex: 1.5;
+  max-height: 250px;
+  min-height: 220px;
+  object-fit: contain;
+}
+.separator{
+  margin: 0px 20px 0px 10px;
+  width: 0px;
+  border: 2px dotted #aaa;
+  flex: 0
+}
+.star, .amenitie{
+  height: 18px;
+  margin: 3px 3px;
+}
+.price-info{
+  flex: 1;
+}
+.price span{
+  font-size: 20px;  
+}
+.price-info p{
+  font-size: small;
+  color: #aaa;
+}
+.btn{
+  font-size: x-small;
+}
+.btn{
+  display: flex;
+  margin: 20px auto 10px auto;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 5px;
+  width: 70%;
+  border-radius: 5px;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: #1976d2;
+}
+</style>
     </head>
       <body>
       <section class="hotels-list">  
